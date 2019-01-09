@@ -1,0 +1,28 @@
+def main():
+    tax_base = calc_employment_income + calc_business_income
+
+
+def calc_employment_income():
+    employment_income = income - deducation
+    income = input('給与の金額を入力してください')
+    deducation = income * deducation_rate
+    def deducation_rate():
+        if income > 10000000:
+            return 2200000
+        if income > 6600000:
+            return income * 10% + 1200000
+        if income > 3600000:
+            return income * 20% + 540000
+        if income > 1800000:
+            return income *30% +180000
+        if income >650000:
+            return income * 40%
+        return 650000
+print(employment_income)
+
+
+def calc_business_income():
+
+if __name__ == '__main__': # condsoleから起動した時、ここがtrueになる
+    main()_ == '__main__': # condsoleから起動した時、ここがtrueになる
+    main()
