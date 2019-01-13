@@ -7,15 +7,25 @@ def main():
     zyoto = calc_transfer_income()
     ichizi = calc_temporary_income()
     zatsu = calc_other_income()
+    return kyuyo
+    print(kyuyo)
 
 
 def calc_dividend_income():
     pass
 
-def calc_dividend_income
 
 def calc_business_income():
-    pass
+    income = int(input("今年度の事業収入の合計額はいくらですか？"))
+    outcome = int(input("今年度の事業経費合計額はいくらですか？"))
+    business_income = income - outcome
+    if business_income > 650000:
+        return business_income = business_income - 650000
+    if business_income < 0:
+        pass
+    if business_income < 650000:
+        return business_income = 0
+    return business_income
 
 def calc_employment_income():
     income = int(input("今年度の給与額はいくらですか？"))
