@@ -1,15 +1,8 @@
 def main():
-    haito = calc_dividend_income()
-    hudosan = calc_real_estate_income()
     zigyo = calc_business_income()
     kyuyo = calc_employment_income()
-    taisyoku = calc_retire_income()
-    zyoto = calc_transfer_income()
-    ichizi = calc_temporary_income()
-    zatsu = calc_other_income()
-    return kyuyo
-    print(kyuyo)
-
+    the_total_income = zigyo + kyuyo
+    return the_total_income
 
 def calc_dividend_income():
     pass
