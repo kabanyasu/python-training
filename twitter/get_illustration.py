@@ -23,8 +23,8 @@ def dir_check():
             dir_name = "/dir" + str(check_count)
             return dir_name
         check_count += 1
-        
-def get_target_word(word):
+        　
+def get_target_word(word): #searchTweetsのAPI参照　https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets
     url = 'https://api.twitter.com/1.1/search/tweets.json'
     params = {
         "q":word,
