@@ -26,9 +26,6 @@ def dir_check():
         check_count += 1
 
 
-　
-
-
 # searchTweetsのAPI参照　https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets
 def get_target_word(word):
     url = 'https://api.twitter.com/1.1/search/tweets.json'
