@@ -13,6 +13,7 @@ twitter = OAuth1Session(
 )
 mkdir_name = 'kyoko_illustration'
 
+
 def dir_check():
     if not os.path.isdir(mkdir_name):
         os.mkdir(mkdir_name)
@@ -23,18 +24,24 @@ def dir_check():
             dir_name = "/dir" + str(check_count)
             return dir_name
         check_count += 1
-        　
-def get_target_word(word): #searchTweetsのAPI参照　https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets
+
+
+　
+
+
+# searchTweetsのAPI参照　https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets
+def get_target_word(word):
     url = 'https://api.twitter.com/1.1/search/tweets.json'
     params = {
-        "q":word,
-        "count":100
+        "q": word,
+        "count": 100
     }
-    req = twitter.get(url, params = params)
+    req = twitter.get(url, params=params)
     timeline = json.loads(req.text)
     return timeline
 
-def get_illustration (timeline, dir_name):
+
+def get_illustration(timeline, dir_name):
     global image
     global image_number
     image_number = 0
@@ -46,7 +53,7 @@ def get_illustration (timeline, dir_name):
                 image = media['media_url']
                 if image in check_image:
                     continue
-                with open(mkdir_name + dir_name +"/kyoko_image_"+str(image_number) +"_"+os.path.basename(image), 'wb') as f:
+                with open(mkdir_name + dir_name + "/kyoko_image_"+str(image_number) + "_"+os.path.basename(image), 'wb') as f:
                     img = urllib.request.urlopen(image).read()
                     f.write(img)
                 check_image.append(image)
